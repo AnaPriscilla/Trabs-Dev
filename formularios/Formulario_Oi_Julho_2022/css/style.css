@@ -73,15 +73,17 @@ body {
 }
 
 .logo_1,
-.logo_2 {
+.logo_2,
+.logo_3 {
     margin: 0 .5rem 0 .5rem;
 }
 
-.logo_2 img {
-    width: 5.5rem;
+.logo_1 img {
+    width: 5rem;
 }
 
-.logo_1 img {
+.logo_2 img,
+.logo_3 img {
     width: 6.5rem;
 }
 
@@ -127,13 +129,13 @@ body {
     width: 18rem;
     padding: 1rem;
     /*background-color: #0B0D05;*/
-    border-radius: 15px;
+    border-radius: 5px 5px 0 0;
 }
 
 .container_card {
-    padding: 1rem;
+    /*padding: 1rem;*/
     margin-left: 2rem;
-    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     background-color: var(--white);
 }
 
@@ -182,7 +184,7 @@ body {
 
 .info_price_card_dinamico {
     width: 11rem;
-    margin-top: -2rem;
+    margin-top: -0.5rem;
 }
 
 .info_price_card_dinamico .value-1-card-dinamico {
@@ -219,6 +221,32 @@ body {
 
 .value-component-card-dinamico p {
     color: #17D615;
+}
+
+.card-lateral-btns {
+    width: 100%;
+    display: flex;
+    margin: 2rem 0 1rem 0;
+}
+
+.card-lateral-btns button {
+    height: 2.5rem;
+    width: 50%;
+    padding: .5rem;
+    cursor: pointer;
+    border: 1px solid var(--white);
+    background-color: var(--black);
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.card-lateral-btns button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.card-lateral-btns .trocaProduto {
+    margin-left: 1rem;
 }
 
 
@@ -279,7 +307,7 @@ body {
 .container_form {
     width: 70%;
     /*padding: 0 4rem 0 1rem;*/
-    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     border-radius: 5px;
     background-color: var(--white);
 }
@@ -309,8 +337,10 @@ body {
     margin-bottom: 2rem;
 }
 
-.title_page h5 {
-    color: var(--grey);
+.title_page h5,
+.title_page h4 {
+    color: var(--grey-letter);
+    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
@@ -337,7 +367,7 @@ body {
 }
 
 .header_indicador {
-    padding: 1rem 2rem;
+    padding: 1rem 5rem;
     background-color: var(--black);
     border-radius: 5px 5px 0 0;
 }
@@ -356,7 +386,7 @@ body {
     transform: translateY(-50%);
     height: 4px;
     background: var(--white);
-    width: 87%;
+    width: 83%;
     max-width: 100%;
     left: 0;
     z-index: 10;
@@ -410,7 +440,7 @@ body {
 
 .tab.show {
     display: block;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .tab p {
@@ -768,8 +798,9 @@ input[type="tel"] {
 }
 
 .autorizo p {
-    font-size: .7rem;
+    font-size: .65rem;
     margin-bottom: 0!important;
+    color: var(--black);
 }
 
 .whats img {
@@ -783,7 +814,7 @@ input[type="tel"] {
 .autorizo-checkbox {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 1.85rem;
     cursor: pointer;
     font-size: 20px;
     -webkit-user-select: none;
@@ -804,8 +835,8 @@ input[type="tel"] {
     position: absolute;
     top: 0;
     left: 0;
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
     border: 1px solid grey;
 }
 
@@ -814,8 +845,8 @@ input[type="tel"] {
 }
 
 .autorizo-checkbox input:checked~.checkmark-box {
-    background-color: #00d213;
-    border: 1px solid #00d213;
+    background-color: var(--green);
+    border: 1px solid var(--green);
 }
 
 .autorizo-checkbox .checkmark-box:after {
@@ -829,8 +860,8 @@ input[type="tel"] {
 }
 
 .autorizo-checkbox .checkmark-box:after {
-    left: 7px;
-    top: 3px;
+    left: 5px;
+    top: 2px;
     width: 5px;
     height: 10px;
     border: solid white;
@@ -1469,4 +1500,51 @@ input:-webkit-autofill {
 .btn-adicionar button:hover {
     background-color: var(--green);
     border: 1px solid var(--green);
+}
+
+.card_oferta {
+    background-color: var(--black);
+}
+
+.card-lateral-header {
+    padding: 1rem 0;
+}
+
+.card-lateral-header h2 {
+    color: var(--green);
+    font-size: .95rem;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 1.5rem;
+}
+
+.card-infos {
+    padding: 2rem 1rem;
+}
+
+.card-infos p {
+    margin: .3rem 0;
+}
+
+.box-card-infos {
+    background-color: var(--grey-card);
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+}
+
+.box-card-infos h4 {
+    margin-bottom: 1rem;
+    font-size: .9rem;
+}
+
+.box-card-infos ul li {
+    list-style-type: none;
+    font-size: .85rem;
+    margin: .2rem 0;
+}
+
+.box-card-infos i {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 1rem;
 }
