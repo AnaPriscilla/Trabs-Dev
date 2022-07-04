@@ -30,15 +30,14 @@ btnNext.addEventListener("click", function() {
     /*para avançar os campos alterar o || por && */
     for (let j = 0; j < allInputPerTab.length; j++) {
         let formaPagamento = document.querySelector('input[name=forma_pagamento]:checked').value;
-        if(i === allTab.length - 1 && formaPagamento == 'boleto'){
-        }else{
+        if (i === allTab.length - 1 && formaPagamento == 'boleto') {} else {
             if (allInputPerTab[j].value === "" && !allInputPerTab[j].checkValidity()) {
                 allInputPerTab[j].style.borderColor = "red";
                 return false;
-            }else {
+            } else {
                 allInputPerTab[j].style.borderColor = "#ddd";
             }
-        } 
+        }
     }
 
     indicatorItemsChecked[i].classList.remove("stepUnchecked");
@@ -55,7 +54,7 @@ btnNext.addEventListener("click", function() {
     } else {
         for (let j = 0; j < allTab.length; j++) {
             // Alteração para aparecer o check
-        
+
             allTab[j].classList.remove("show");
             indicadorItems[j].classList.remove("active");
         }
@@ -63,7 +62,7 @@ btnNext.addEventListener("click", function() {
         for (let j = 0; j < i; j++) {
             indicadorItems[j].classList.add("active");
         }
-        
+
 
         allTab[i].classList.add("show");
         indicador.style.width = `${i * 50}%`;
@@ -78,7 +77,7 @@ btnNext.addEventListener("click", function() {
     }
 
     if (i === allTab.length - 1) {
-        btnNext.innerHTML = "Finalizar"; 
+        btnNext.innerHTML = "Finalizar";
     } else {
         btnNext.innerHTML = "Avançar &rarr;";
     }
@@ -143,19 +142,19 @@ $(window).load(function() {
 function iniciaModal(modalID) {
     const modal = document.getElementById(modalID);
     if (modal) {
-      modal.classList.add("mostrar");
-      modal.addEventListener("click", function (evento) {
-        if (evento.target.id == "fechar") {
-          modal.classList.remove("mostrar");
-        }
-      });
+        modal.classList.add("mostrar");
+        modal.addEventListener("click", function(evento) {
+            if (evento.target.id == "fechar") {
+                modal.classList.remove("mostrar");
+            }
+        });
     }
-  }
-  
+}
 
-    // const btclick = document.querySelector(".btclick");
-    // btclick.addEventListener("click", function () {
-    //   iniciaModal("modal-form");
-    // });
-  
-     //iniciaModal("modal-form");
+
+// const btclick = document.querySelector(".btclick");
+// btclick.addEventListener("click", function () {
+//   iniciaModal("modal-form");
+// });
+
+//iniciaModal("modal-form");

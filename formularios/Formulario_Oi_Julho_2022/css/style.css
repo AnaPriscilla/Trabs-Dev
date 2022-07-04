@@ -15,6 +15,7 @@
  :root {
     --white: #fff;
     --green: #00d213;
+    --yellow: #ffd700;
     --shadow: #333333;
     --black: #2b2828;
     --grey-black: #7c7c7c;
@@ -114,6 +115,7 @@ body {
     width: 100%;
 }
 
+
 /*Card de Oferta*/
 
 .card_dinamico {
@@ -149,77 +151,76 @@ body {
     margin-top: 2rem;
 }
 
- .box_valores_dinamico {
-      display: flex;
-  }
+.box_valores_dinamico {
+    display: flex;
+}
 
-  .card_price_dinamico {
-      width: 10rem;
-  }
+.card_price_dinamico {
+    width: 10rem;
+}
 
-  .card_price_dinamico p {
-      font-size: .8rem;
-      color: rgb(156, 156, 156);
-      margin-bottom: .5rem;
-  }
+.card_price_dinamico p {
+    font-size: .8rem;
+    color: rgb(156, 156, 156);
+    margin-bottom: .5rem;
+}
 
-  .card_price_dinamico p span {
-      text-decoration: line-through;
-  }
+.card_price_dinamico p span {
+    text-decoration: line-through;
+}
 
-  .info_price {
-      width: 7rem;
-      margin-top: -2rem;
-      margin-left: 1rem;
-  }
+.info_price {
+    width: 7rem;
+    margin-top: -2rem;
+    margin-left: 1rem;
+}
 
-  .info_price p {
+.info_price p {
     color: rgb(156, 156, 156);
     font-size: .55rem;
-  }
+}
 
-  .info_price_card_dinamico {
+.info_price_card_dinamico {
     width: 11rem;
     margin-top: -2rem;
-  }
+}
 
-  .info_price_card_dinamico .value-1-card-dinamico {
+.info_price_card_dinamico .value-1-card-dinamico {
     font-size: 3rem;
     margin-left: .3rem;
     font-weight: bold;
-  }
+}
 
-  .info_price_card_dinamico .value-small-card-dinamico {
+.info_price_card_dinamico .value-small-card-dinamico {
     padding-top: 7px;
-    font-size: 20px; 
+    font-size: 20px;
     margin-left: .2rem;
     font-weight: bold;
-  }
+}
 
-  .info_price_card_dinamico .value-year-card-dinamico {
+.info_price_card_dinamico .value-year-card-dinamico {
     margin-left: -1.7rem;
     padding-top: 30px;
-    font-size: 15px; 
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: bold;
-  }
+}
 
-  .info_price_card_dinamico .value-caractere-card-dinamico {
+.info_price_card_dinamico .value-caractere-card-dinamico {
     padding-top: 28px;
     font-size: 18px;
     font-weight: bold;
-  }
+}
 
-
-  .value-component-card-dinamico {
-      display: flex;
-      flex-direction: row;
-  }
-
+.value-component-card-dinamico {
+    display: flex;
+    flex-direction: row;
+}
 
 .value-component-card-dinamico p {
     color: #17D615;
 }
+
 
 /*Barra título Ambiente de compra*/
 
@@ -250,6 +251,10 @@ body {
 
 .field label {
     margin-top: 1rem;
+}
+
+.colunas3 .field select {
+    height: 2.5rem;
 }
 
 .button_form {
@@ -287,10 +292,21 @@ body {
     /*padding: 2rem 0 0 1rem;*/
 }
 
-.title_page h2 {
+.title_page h2,
+.title_page h3 {
     font-weight: 600;
     font-size: 1.3rem;
     margin-bottom: .2rem;
+}
+
+.title_page h3 {
+    text-align: center;
+}
+
+.title_page h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
 .title_page h5 {
@@ -485,9 +501,25 @@ form .btn button.prev {
     margin-right: .1rem;
 }
 
+
 /*Estilo para os campos do formulário*/
 
-.form_colunas [class^=colunas3] {
+.form_colunas [class^=colunas1],
+.form_colunas2 [class^=colunas1] {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+}
+
+.form_colunas [class^=colunas2],
+.form_colunas2 [class^=colunas2] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+}
+
+.form_colunas [class^=colunas3],
+.form_colunas2 [class^=colunas3] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -509,7 +541,7 @@ form .btn button.prev {
 
 .form_colunas_debito [class^=colunas4] {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     grid-gap: 0;
 }
 
@@ -527,8 +559,14 @@ form .btn button.prev {
     height: 2.5rem;
 }
 
-#idDadosDebito {
+#idDadosBoleto {
     display: none;
+}
+
+.debito span,
+.contadigital span,
+.viacorreios span {
+    color: var(--grey-letter);
 }
 
 
@@ -541,7 +579,8 @@ form .btn button.prev {
 .col-3 {
     float: left;
     width: 100%;
-    margin: 15px 3%;
+    /*margin: 15px 3%;*/
+    margin: .5rem 0;
     position: relative;
     z-index: 2;
 }
@@ -604,6 +643,7 @@ input[type="tel"] {
     color: grey;
 }
 
+
 /*Termos e condições*/
 
 .termos {
@@ -619,6 +659,7 @@ input[type="tel"] {
     font-size: 1rem;
 }
 
+
 /*Concordo*/
 
 .concordo {
@@ -633,6 +674,7 @@ input[type="tel"] {
     margin-top: .3rem;
     font-size: 1rem;
 }
+
 
 /*Eslizando o Checkbox de termos e concordo*/
 
@@ -705,6 +747,7 @@ input[type="tel"] {
     transform: rotate(45deg);
 }
 
+
 /*Estilo escolha data de vencimento*/
 
 .title-data-venc p {
@@ -716,6 +759,87 @@ input[type="tel"] {
     display: flex;
     margin-left: .5rem;
 }
+
+
+/*Autorizo*/
+
+.box_autorizo {
+    display: flex;
+}
+
+.autorizo p {
+    font-size: .7rem;
+    margin-bottom: 0!important;
+}
+
+.whats img {
+    width: 2rem;
+    margin: .5rem .8rem 0 0;
+}
+
+
+/*Eslizando o Checkbox de Autorizo Whatsapp*/
+
+.autorizo-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.autorizo-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.autorizo-checkbox .checkmark-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    border: 1px solid grey;
+}
+
+.autorizo-checkbox a {
+    color: #00d213;
+}
+
+.autorizo-checkbox input:checked~.checkmark-box {
+    background-color: #00d213;
+    border: 1px solid #00d213;
+}
+
+.autorizo-checkbox .checkmark-box:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.autorizo-checkbox input:checked~.checkmark-box:after {
+    display: block;
+}
+
+.autorizo-checkbox .checkmark-box:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 
 /*Estilização dos input type="radio"*/
 
@@ -814,19 +938,20 @@ input[type="tel"] {
 
 .checkmark_venc {
     position: absolute;
-    top: .5rem;
-    left: 0;
-    height: 25px;
-    width: 25px;
+    top: .6rem;
+    left: -0.3rem;
+    height: 35px;
+    width: 35px;
     background-color: #fff;
     border: 1px solid rgb(128, 128, 128);
-    border-radius: 50%;
-    margin-top: -0.3rem;
+    border-radius: 10%;
+    margin-top: -0.7rem;
 }
 
 .label-venc input:checked~.checkmark_venc {
-    background-color: #00d213;
-    border: 1px solid #00d213;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--white);
 }
 
 .checkmark_venc:after {
@@ -837,6 +962,7 @@ input[type="tel"] {
 
 .label-venc input:checked~.checkmark_venc:after {
     display: block;
+    color: #fff;
 }
 
 .label-opcao-numero {
@@ -852,6 +978,7 @@ input[type="tel"] {
     color: grey;
 }
 
+
 /*ATENÇÃO pagamento no boleto*/
 
 .label-pag-boleto p {
@@ -863,23 +990,52 @@ input[type="tel"] {
     color: red;
 }
 
+
 /*Forma de pagamento*/
 
 .box-forma-pag {
     display: flex;
-    margin-left: -0.5rem;
+    flex-direction: column;
+}
+
+.box_pagamento_debito {
+    padding: 0 1rem;
+}
+
+.box_pagamento_debito .colunas1 select {
+    height: 2.5rem;
 }
 
 .boleto p,
-.debito p {
+.debito p,
+.contadigital p,
+.viacorreios p {
     font-size: 1rem;
 }
+
+.data_vencimento {
+    margin-bottom: 2rem;
+}
+
+.diapag {
+    padding: .5rem 0;
+    border: 1px solid rgba(0 0 0 / 5%);
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 10px rgba(0 0 0 / 5%);
+}
+
+.form_colunas_debito p {
+    padding: 1rem 0 0 .5rem;
+    color: var(--grey-letter);
+}
+
 
 /* Cor de fundo do autocomplete */
 
 input:-webkit-autofill {
     box-shadow: 0 0 0 30px white inset;
 }
+
 
 /* Checkmark */
 
@@ -893,8 +1049,8 @@ input:-webkit-autofill {
 
 .indicador .bola .circle.circleInvisible {
     display: none;
-    
 }
+
 
 /* MODAL CONTAINER */
 
@@ -910,33 +1066,33 @@ input:-webkit-autofill {
     justify-content: center;
     align-items: center;
 }
-  
+
 .modal-container.mostrar {
     display: flex;
 }
-  
+
 .modal {
     background: #fff;
     width: 55%;
     border: 3px solid #00d213;
     position: relative;
 }
-  
+
 @keyframes modal {
     from {
-      opacity: 0;
-      transform: translate3d(0, -60px, 0);
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
     }
     to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
-  
+
 .mostrar .modal {
     animation: modal 1.5s;
 }
-  
+
 #fechar {
     position: absolute;
     font-size: 1.2em;
@@ -952,7 +1108,6 @@ input:-webkit-autofill {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-  
 #fechar:hover {
     background: #00d213;
     color: #fff;
@@ -991,7 +1146,6 @@ input:-webkit-autofill {
 }
 
 .title-text-pedido h3 {
- 
     font-weight: bold;
     font-size: 1.4rem;
     margin-left: 1rem;
@@ -1080,12 +1234,15 @@ input:-webkit-autofill {
     background-color: #1ff130;
 }
 
+
 /*Barra Inidicadora*/
+
 @media(min-width:1550px) {
     .indicador .line {
         width: 90%;
     }
 }
+
 
 /*Mobile*/
 
@@ -1095,75 +1252,58 @@ input:-webkit-autofill {
     .footer_form {
         width: 100%;
     }
-
     .logo img {
         width: 4rem;
     }
-
     .title-nav {
         align-items: center;
     }
-
     .title-nav h1 {
         font-size: .9rem;
         margin-left: .3rem;
     }
-
     .material-icons {
         font-size: 18px!important;
     }
-
     .nav_itens {
         padding: 1rem;
     }
-
     .item_dados h3 {
         font-size: .65rem;
         text-align: center;
     }
-
     .item_dados {
         width: 4.5rem;
         padding: 0 .5rem 0 .5rem;
     }
-
     .indicador .line {
         top: 83%;
         width: 75%;
     }
-
     .card_header_dinamico h2 {
         font-size: 3rem;
     }
-
     .info_price {
         margin-left: 0;
     }
-
     .info_price p {
         font-size: .7rem;
     }
-
     .card_price_dinamico p {
         font-size: 1rem;
     }
-
     .container_geral {
         flex-direction: column-reverse;
     }
-
     .footer_itens {
         padding: 1rem;
     }
-
     .logo_1 img {
         width: 5rem;
     }
-
     .logo_2 img {
         width: 4rem;
     }
-
     .main_form {
         padding: .5rem .5rem 2.5rem .5rem;
     }
@@ -1215,97 +1355,78 @@ input:-webkit-autofill {
         margin-right: .2rem;
         font-size: .9rem;
     }
-
     form .btn button.next {
         font-size: .9rem;
     }
-
     .title_page {
         padding: 2rem 0 0 .5rem;
     }
-    
     .title_page h2 {
         padding-bottom: .5rem;
     }
-
     .debito p,
     .boleto p {
         font-size: .9rem;
     }
-
     .label-pag-boleto p {
         font-size: .85rem;
     }
-
     .termos p {
         font-size: .85rem;
     }
-
     .concordo p {
         font-size: .7rem;
     }
-
     .modal {
         width: 80%;
     }
-
-
     .banner-pedido {
         display: none;
     }
-
     .box-pedido {
         width: 100%;
     }
-
     .title-pedido {
         padding: 1.5rem 1rem 1rem 1rem;
     }
-
     .title-text-pedido h3 {
         font-size: 1.2rem;
         text-align: center;
         margin-left: .5rem;
     }
-
     .title-text-pedido .material-icons {
         font-size: 30px!important;
     }
-
     .logo-pedido img {
         width: 2.5rem;
     }
-
     .container-infos-pedido {
         margin: 1rem .5rem 0 .5rem;
     }
-
     .icons-seguranca {
         display: flex;
         margin-left: .5rem;
     }
-
     .icons-seguranca .pedido-1,
     .icons-seguranca .pedido-2 {
         margin-right: .5rem;
     }
-
     .botoes-pedido {
         width: 100%;
         margin-left: 0;
         padding: 2rem .5rem 1rem .5rem;
     }
-
     .botoes-pedido .pagina-inicial button {
         padding: 1rem 5rem;
         font-size: .75rem;
     }
-
 }
-.is-invalid{
+
+.is-invalid {
     color: red !important;
 }
-.is-valid{
+
+.is-valid {
     color: #0cd10c !important;
 }
 
@@ -1315,7 +1436,37 @@ input:-webkit-autofill {
     justify-content: center;
 }
 
+.whats i {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    color: var(--green);
+}
 
 .whats label {
     font-size: .8rem;
+}
+
+.title_tipo {
+    padding: 0 1rem 2rem 1rem;
+}
+
+.item-forma-pag {
+    padding: 1.6rem 0 .5rem 0;
+    border: 1px solid rgba(0 0 0 / 5%);
+    box-shadow: 0 5px 10px rgba(0 0 0 / 5%);
+    margin: .5rem 0;
+}
+
+.btn-adicionar button {
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid var(--black);
+    font-size: 1rem;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.btn-adicionar button:hover {
+    background-color: var(--green);
+    border: 1px solid var(--green);
 }
