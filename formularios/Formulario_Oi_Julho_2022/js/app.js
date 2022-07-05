@@ -138,7 +138,7 @@ $(window).load(function() {
     });
 });
 
-/*Modal*/
+/*Modal Pedido Finalizado*/
 function iniciaModal(modalID) {
     const modal = document.getElementById(modalID);
     if (modal) {
@@ -151,10 +151,28 @@ function iniciaModal(modalID) {
     }
 }
 
+/*Modal Adicionar Complemento*/
+function iniciaModalAdd(modalIDAdd) {
+    const modalAdd = document.getElementById(modalIDAdd);
+    if (modalAdd) {
+        modalAdd.classList.add("mostrarAdd");
+        modalAdd.addEventListener("click", function(evento) {
+            if (evento.target.id == "sair") {
+                modalAdd.classList.remove("mostrarAdd");
+            }
+        });
+    }
+}
 
-// const btclick = document.querySelector(".btclick");
-// btclick.addEventListener("click", function () {
-//   iniciaModal("modal-form");
-// });
-
-//iniciaModal("modal-form");
+/*Modal Consultar Cobertura*/
+function iniciaModalConsul(modalIDConsul) {
+    const modalConsult = document.getElementById(modalIDConsul);
+    if (modalConsult) {
+        modalConsult.classList.add("mostrarConsul");
+        modalConsult.addEventListener("click", function(evento) {
+            if (evento.target.id == "sairConsul") {
+                modalConsult.classList.remove("mostrarConsul");
+            }
+        });
+    }
+}

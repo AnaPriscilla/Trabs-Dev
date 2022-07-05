@@ -965,6 +965,11 @@ input[type="tel"] {
     font-size: .8rem;
     z-index: 1;
     position: absolute;
+    font-weight: 600;
+}
+
+.datas .dia:checked~p:after {
+    color: var(--white);
 }
 
 .checkmark_venc {
@@ -974,7 +979,7 @@ input[type="tel"] {
     height: 35px;
     width: 35px;
     background-color: #fff;
-    border: 1px solid rgb(128, 128, 128);
+    border: 1px solid #ccc;
     border-radius: 10%;
     margin-top: -0.7rem;
 }
@@ -1370,6 +1375,7 @@ input:-webkit-autofill {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 0;
     }
     form .btn button {
         margin-left: 0;
@@ -1488,8 +1494,14 @@ input:-webkit-autofill {
     margin: .5rem 0;
 }
 
-.btn-adicionar button {
-    height: 2.5rem;
+.btn-adicionar a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--black);
+}
+
+.btn-adicionar .btn-add-comp {
+    padding: .57rem 0;
     width: 100%;
     border: 1px solid var(--black);
     font-size: 1rem;
@@ -1497,9 +1509,9 @@ input:-webkit-autofill {
     cursor: pointer;
 }
 
-.btn-adicionar button:hover {
-    background-color: var(--green);
-    border: 1px solid var(--green);
+.btn-adicionar .btn-add-comp:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .card_oferta {
@@ -1547,4 +1559,288 @@ input:-webkit-autofill {
     color: var(--green);
     font-weight: 600;
     font-size: 1rem;
+}
+
+
+/*Modal-Add-Complemento*/
+
+.modal-comp {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-comp.mostrarAdd {
+    display: flex;
+}
+
+.modalAdd {
+    background: #fff;
+    width: 30%;
+    min-width: 300px;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px var(--green);
+    position: relative;
+}
+
+@keyframes modalAdd {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrarAdd .modalAdd {
+    animation: modalAdd 1s;
+}
+
+#sair {
+    position: absolute;
+    font-size: 1.2em;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modalAdd button {
+    background-color: #fff;
+}
+
+.footer-add p {
+    padding: 1rem 0;
+    border: 1px solid grey;
+    text-align: center;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.header-add,
+.footer-add {
+    display: flex;
+    justify-content: center;
+}
+
+.header-add {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--grey-place);
+    padding: 1rem 0;
+}
+
+.body-add .box-btns-add select {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+.body-add .box-btns-add textarea {
+    width: 80%;
+}
+
+.body-add .box-btns-add textarea {
+    /*height: 3.5rem;*/
+    resize: none;
+}
+
+.body-add .box-btns-add textarea,
+.body-add .box-btns-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-add .box-btns-add,
+.footer-add {
+    width: 100%;
+}
+
+.footer-add .btn-fa-salvar {
+    width: 80%;
+    margin: 2rem 0;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.footer-add .btn-fa-fechar {
+    width: 30%;
+}
+
+.container-btn-cob {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.container-btn-cob .btn-consult p {
+    border: 1px solid var(--green);
+    background-color: var(--green);
+    padding: 2rem 3rem;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.container-btn-cob .btn-consult p:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+
+/*Modal Consultar Cobertura*/
+
+.modal-cober {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cober.mostrarConsul {
+    display: flex;
+}
+
+.modalConsul {
+    background: #fff;
+    width: 30%;
+    min-width: 300px;
+    padding: 0 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px var(--green);
+    position: relative;
+}
+
+@keyframes modalConsul {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrarConsul .modalConsul {
+    animation: modalConsul 1s;
+}
+
+#sairConsul {
+    position: absolute;
+    font-size: 1.2em;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modalConsul button {
+    background-color: var(--white);
+}
+
+.container-consul {
+    padding: 0 1rem;
+}
+
+.header-consul {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--grey-place);
+    padding: 1.5rem 0;
+}
+
+.body-consul .box-text-consul {
+    padding: 1rem 0 2rem 0;
+}
+
+.body-consul .box-text-consul h3 {
+    font-size: .9rem;
+    text-align: center;
+    color: var(--grey-letter);
+}
+
+.body-consul .box-text-consul h5 {
+    font-size: 1.1rem;
+    margin-top: .15rem;
+    text-align: center;
+}
+
+.body-consul form input {
+    height: 2.5rem;
+    padding: 0 .5rem;
+}
+
+.body-consul form #numeroEndConsulta {
+    margin: 1rem 0;
+}
+
+.body-consul form {
+    width: 100%;
+}
+
+.body-consul,
+.footer-consul {
+    padding: 1rem 0 2rem 0;
+}
+
+.footer-consul a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.footer-consul p {
+    background-color: var(--yellow);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-consult a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.modal-contOnline {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contOnline.mostrar {
+    display: flex;
 }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-btn-cob">
+        <div class="btn-consult">
+            <a href="#" onclick="iniciaModalConsul('modal-consul')">
+                <p>Consultar Cobertura</p>
+            </a>
+
+        </div>
+
+
+        <!--Modal-Consultar-Cobertura-->
+        <section class="consul-cober">
+            <div id="modal-consul" class="modal-cober">
+                <div class="modalConsul">
+                    <button id="sairConsul">x</button>
+                    <!--Container consultar cobertura-->
+                    <div class="container-consul">
+                        <div class="header-consul">
+                            <img src="css/img/logo_oi.svg" alt="logo oi">
+                        </div>
+                        <div class="body-consul">
+                            <div class="box-text-consul">
+                                <h3>Consulte sua cobertura</h3>
+                                <h5>Para consultar, informe os dados abaixo:</h5>
+                            </div>
+
+                            <form action="#" method="">
+                                <input type="tel" id="consultarCEP" placeholder="Digite seu CEP">
+                                <input type="tel" id="numeroEndConsulta" placeholder="Nº da residência">
+                                <input type="tel" id="telefoneContato" placeholder="Telefone para contato">
+                            </form>
+                            <div class="box-btns-consul">
+
+                            </div>
+                        </div>
+                        <div class="footer-consul">
+                            <a href="#" onclick="iniciaModal('modal-form')">
+                                <p class="btn-fa-salvar">Consultar Cobertura</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Modal-Pedido-Finalizado-->
+        <section class="pedido-finalizado">
+            <div id="modal-form" class="modal-contOnline">
+                <div class="modal">
+                    <button id="sairConsul">x</button>
+                    <!--Container consultar cobertura-->
+                    <div class="container-consul">
+                        <div class="header-consul">
+                            <img src="css/img/logo_oi.svg" alt="logo oi">
+                        </div>
+                        <div class="body-consul">
+                            <div class="box-text-consul">
+                                <h5>Seu CEP tem cobertura!</h5>
+                                <h3>Selecione a opção abaixo para ver os planos que estão disponíveis no seu endereço.</h3>
+                            </div>
+                        </div>
+                        <div class="footer-consul">
+                            <a href="#" onclick="iniciaModal('modal-form')">
+                                <p class="btn-fa-salvar">Contratar Online</p>
+                            </a>
+
+                            <span>ou ligue grátis 0800 00 000-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

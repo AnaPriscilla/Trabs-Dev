@@ -332,11 +332,14 @@
                                     <div class="btn-adicionar">
                                         <div class="field">
                                             <div class="col-3 input-effect">
-                                                <a href="#">
-                                                    <button>Adicionar Complemento</button>
+                                                <a href="#" onclick="iniciaModalAdd('modal-add')">
+                                                    <p class="btn-add-comp">Adicionar Complemento</p>
                                                 </a>
+
                                             </div>
                                         </div>
+
+
                                     </div>
 
                                 </div>
@@ -400,10 +403,15 @@
                                         </div>
                                     </div>
 
+
+
                                 </div>
 
 
+
                             </div>
+
+
 
                         </div>
 
@@ -656,7 +664,7 @@
                         </div>
                     </form>
 
-                    <!--Modal-Form-->
+                    <!--Modal-Pedido-Finalizado-->
                     <section class="pedido-finalizado">
                         <div id="modal-form" class="modal-container">
                             <div class="modal">
@@ -709,10 +717,38 @@
                     </section>
 
                     <!--Modal-Add-Complemento-->
+                    <section class="add-complemento">
+                        <div id="modal-add" class="modal-comp">
+                            <div class="modalAdd">
+                                <button id="sair">x</button>
+                                <!--Container add complemento-->
+                                <div class="container-add">
+                                    <div class="header-add">
+                                        <img src="css/img/logo_oi.svg" alt="logo oi">
+                                    </div>
+                                    <div class="body-add">
+                                        <div class="box-btns-add">
+                                            <select>
+                                                <option>Tipo</option>
+                                                <option>Apartamento</option>
+                                                <option>Casa</option>
+                                                <option>Viela</option>
+                                            </select>
 
+                                            <textarea name="textarea" rows="5" maxlength="50" placeholder="Descrição">
+                                               
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="footer-add">
+                                        <p class="btn-fa-salvar">salvar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                 </section>
-
 
                 <section class="container_card">
                     <div class="card_oferta">
@@ -816,10 +852,6 @@
 
             </div>
         </footer>
-    </div>
-
-    <div class="models" style="display:none">
-
     </div>
 
     <script type="text/javascript">
