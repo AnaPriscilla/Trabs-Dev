@@ -35,8 +35,8 @@
 
  :root {
     --white: #fff;
-    --green: #00d213;
-    --yellow: #ffd700;
+    --green: #00D318;
+    --yellow: #FFFF00;
     --shadow: #333333;
     --black: #2b2828;
     --grey-black: #7c7c7c;
@@ -161,7 +161,7 @@ body {
 }
 
 .card_header_dinamico h2 {
-    color: #17D615;
+    color: var(--green);
     border-bottom: 2px dotted #fff;
     padding-bottom: .5rem;
     margin-top: 1rem;
@@ -240,7 +240,7 @@ body {
 }
 
 .value-component-card-dinamico p {
-    color: #17D615;
+    color: var(--green);
 }
 
 .card-lateral-btns {
@@ -515,10 +515,11 @@ form .btn button.prev {
 }
 
 form .btn button.next {
-    background: gold;
+    background: var(--yellow);
     border-radius: 5px;
     font-weight: 600;
     font-size: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
 }
 
 form .btn button.next:hover {
@@ -862,7 +863,7 @@ input[type="tel"] {
 }
 
 .autorizo-checkbox a {
-    color: #00d213;
+    color: var(--green);
 }
 
 .autorizo-checkbox input:checked~.checkmark-box {
@@ -930,8 +931,8 @@ input[type="tel"] {
 }
 
 .label-opcao-numero-ex input:checked~.checkmark {
-    background-color: #00d213;
-    border: 1px solid #00d213;
+    background-color: var(--green);
+    border: 1px solid var(--green);
 }
 
 .checkmark:after {
@@ -1131,8 +1132,9 @@ input:-webkit-autofill {
 .modal {
     background: #fff;
     width: 45%;
-    border: 3px solid #00d213;
+    /*border: 3px solid #00d213;*/
     position: relative;
+    border-radius: 5px;
 }
 
 @keyframes modal {
@@ -1158,15 +1160,15 @@ input:-webkit-autofill {
     right: -0.15rem;
     width: 30px;
     height: 30px;
-    border: 3px solid #00d213;
+    border: 3px solid var(--green);
     background: #fff;
-    color: #00d213;
+    color: var(--green);
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 #fechar:hover {
-    background: #00d213;
+    background: var(--green);
     color: #fff;
 }
 
@@ -1205,7 +1207,7 @@ input:-webkit-autofill {
 }
 
 .title-text-pedido .material-icons {
-    color: #00d213;
+    color: var(--green);
     /*margin-left: .5rem;*/
 }
 
@@ -1226,7 +1228,7 @@ input:-webkit-autofill {
 }
 
 .contato-pedido a {
-    color: #00d213;
+    color: var(--green);
     text-decoration: none;
     font-size: 1.2rem!important;
     font-weight: bold;
@@ -1282,6 +1284,7 @@ input:-webkit-autofill {
     color: #000;
     background-color: var(--yellow);
     font-weight: bold;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
 }
 
 .botoes-pedido .pagina-inicial button:hover {
@@ -1325,9 +1328,6 @@ input:-webkit-autofill {
     .header_form,
     .footer_form {
         width: 100%;
-    }
-    .logo img {
-        width: 4rem;
     }
     .title-nav {
         align-items: center;
@@ -1374,7 +1374,7 @@ input:-webkit-autofill {
         padding: 1rem;
     }
     .logo_1 img {
-        width: 5rem;
+        width: 4rem;
     }
     .logo_2 img {
         width: 4rem;
@@ -1436,7 +1436,7 @@ input:-webkit-autofill {
         font-size: .9rem;
     }
     .title_page {
-        padding: 2rem 0 0 .5rem;
+        padding: 1rem 0 0 0;
     }
     .title_page h2 {
         padding-bottom: .5rem;
@@ -1475,7 +1475,7 @@ input:-webkit-autofill {
         font-size: 30px!important;
     }
     .logo-pedido img {
-        width: 2.5rem;
+        width: 2.5rem!important;
     }
     /*
     .container-infos-pedido {
@@ -1496,7 +1496,8 @@ input:-webkit-autofill {
     }
     .botoes-pedido .pagina-inicial button {
         padding: 1rem 5rem;
-        font-size: .75rem;
+        font-size: .9rem;
+        margin-bottom: 1rem;
     }
     .form_colunas .colunas2,
     .form_colunas2 .colunas2,
@@ -1540,13 +1541,19 @@ input:-webkit-autofill {
         margin-bottom: 2rem;
     }
     .header-add img {
-        width: 3.5rem;
+        width: 3rem!important;
     }
     .container-infos-pedido {
         padding: 1rem 2rem;
     }
     .body-online .box-text-consul h3 {
         padding: 0!important;
+    }
+    .logo_footer img {
+        width: 2rem;
+    }
+    form .btn button.prev {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
     }
 }
 
@@ -1653,7 +1660,7 @@ input:-webkit-autofill {
 .box-card-infos i {
     color: var(--green);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 
@@ -1771,6 +1778,7 @@ input:-webkit-autofill {
     border: 1px solid var(--yellow);
     border-radius: 5px;
     font-weight: 600;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
 }
 
 .footer-add .btn-fa-fechar {
@@ -1932,6 +1940,7 @@ input:-webkit-autofill {
     text-align: center;
     font-weight: bold;
     font-size: 1.15rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
 }
 
 .btn-consult a {
@@ -1978,6 +1987,7 @@ input:-webkit-autofill {
     padding: 1.5rem 3rem;
     background-color: var(--yellow);
     border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
 }
 
 .footer-online .btn-contOn:hover {
@@ -1996,6 +2006,7 @@ input:-webkit-autofill {
     border-radius: 5px;
     background-color: var(--black);
     color: var(--white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
 }
 
 .footer-online .btn-lig:hover {
