@@ -1511,7 +1511,7 @@ input:-webkit-autofill {
         width: 90%;
     }
     form .btn {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem 3rem 1rem;
     }
     form .btn button.next,
     form .btn button.prev {
